@@ -1,0 +1,279 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: #641b4e;
+    
+    font-family: 'Abril Fatface', cursive;
+
+}
+section {
+    position: relative;
+    padding: 100px;
+    display:flex;
+    justify-content: flex-start;
+    min-height: 100vh;
+}
+section .logo {
+    position: fixed;
+    top: 30px;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-size: 2em;
+    z-index: 100;
+    cursor: pointer;
+    text-shadow: 1px 1px 2px blue, 0 0 1em red, 0 0 0.2em red;
+    
+}
+section .con {
+   overflow: hidden;
+    max-width: 750px;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 60px;
+   
+
+}
+@-webkit-keyframes slide_animation {
+    0% {left: 0px;}
+    9% {left: 0px;}
+    16% { left: 750px;}
+    24% { left: 750px;}
+    30% {left: 1500px}
+    38% {left: 1500px}
+    45% {left:2250px;}
+    53% {left:2250px;}
+    60% {left: 1500px;}
+    68% {left: 1500px;}
+    77% {left:750px;}
+    85% {left:750px;}
+    93% {left:0px;}
+    100% {left: 0px;}
+    
+  
+    
+    
+}
+.image-slide {
+    width: 3000px;
+    height: 100%;
+    margin: 0 0 0 -2250px;
+    position: relative;
+    transition: all  ease-in-out;
+    -webkit-animation-name: slide_animation;
+    -webkit-animation-duration: 60s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-play-state: running;
+    
+}
+section .bg-con {
+   width: 750px;
+   position: relative;
+   float: left;
+
+    
+}
+section .bg-con .bg {
+    width: 100%;
+    transition: all ease-in-out .5s ;
+    animation-delay: 2s;
+}
+section .content {
+    position: relative;
+    max-width: 620px;
+    z-index: 1;
+    padding-top: 100px;
+}
+section .content h2 {
+    color: #fff;
+    margin:40px 0;
+    font-size: 3em;
+    font-weight: 700;
+    line-height: 1.1em;
+   
+  background-image: linear-gradient(
+    -225deg,
+    #4fc3dc 0%,
+    #f3f3f3 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 25s linear infinite;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+section .content p {
+    color: #fff;
+    font-size: 1.1em;
+    margin: 20px 0 20px;
+    font-family: 'Poppins', sans-serif;
+}
+section .content a {
+    color: rgba(255, 255, 255, .8);
+    background: rgb(246, 15, 32);
+    font-size: 1em;
+    margin: 20px 0;
+    font-weight: 500;
+    padding: 10px 30px;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all .2s;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+}
+section .content a:hover {
+    color: rgba(255, 255, 255, 1);
+    filter:brightness(1.5);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(246, 15, 32, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    }
+
+.copyrightText {
+    position: absolute;
+    bottom: 20px;
+    color: #fff;
+    font-size: 1.1em;
+    margin: 20px 0 10px;
+}
+.menuToggle {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    background: #f60f20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.3em;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1000;
+}
+.menuToggle.active {
+    background: #f60f20 url(./css/close.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30px;
+    cursor: pointer;
+}
+.menuToggle.active ~ .menuToggle {
+    display: none;
+}
+.navigation {
+    position: fixed;
+    top: 0;
+    left: calc(100% - 60px);
+    width: 100%;
+    height: 100%;
+    background: #641b4e;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s;
+}
+.navigation.active {
+    left:0;
+}
+.navigation ul {
+    position: relative;
+}
+.navigation ul li {
+    position: relative;
+    list-style: none;
+    text-align: center;
+}
+.navigation ul li a {
+    font-size: 2.5em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 300;
+}
+.navigation ul li a:hover {
+    color: #f60f20;
+}
+.socialBar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 100%;
+    border-right: 1px solid rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f3f3f3;
+}
+.socialBar ul {
+    position: relative;
+}
+.socialBar ul li {
+    position: relative;
+    list-style: none;
+    height: 70px;
+}
+.socialBar ul li a {
+   position: relative;
+    display: inline-block;
+    transform: scale(1);
+}
+.socialBar ul li a img{
+    width: 50px;
+    height: 50px;
+}
+.socialBar .emailBx {
+    position: absolute;
+    bottom: 20px;
+    transform: scale(0.2);
+}
+
+@media (max-width: 767px) {
+    section {
+        padding: 100px 40px;
+    }
+    section .content {
+        padding-top: 0;
+    }
+    section .content h2 {
+        font-size: 2.5em;
+    }
+    .navigation {
+        left:100%
+    }
+    section .con {
+         width: 100%;
+         height: 100%;
+         position: absolute;
+         top: 0;
+         right:0;
+         object-fit: cover;
+         opacity: 0.5;
+    }
+    section .logo {
+        top: 10px;
+        font-size:1.5em ;
+    }
+    .navigation ul li a {
+        font-size: 2em;
+    }
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:wght@200;300;400&display=swap" rel="stylesheet">
+    <title>Creatives</title>
+</head>
+<body>
+    <section>
+          
+        <div class="logo">Creatives</div>
+        <div class="con">
+            <div class="image-slide">
+                <div class="bg-con">
+                    <img src="./css/pexels-paul-theodor-oja-2792116.jpg" class="bg">         
+                </div>
+                <div class="bg-con">
+                    <img src="./css/pexels-lucas-pezeta-3405547.jpg" class="bg">       
+                </div>
+                <div class="bg-con">
+                    <img src="./css/pexels-naomi-bokhout-627901.jpg" class="bg">     
+                </div>
+                <div class="bg-con">
+                    <img src="./css/pexels-motional-studio-1081939.jpg" class="bg">       
+                </div>
+            </div>
+        </div>
+        
+        
+
+        
+        <div class="content">
+            <h2>Let's Make <br> Something Creative</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                 Ipsum consequatur porro a cumque fugiat nisi quo eius eos ex!
+                  Iure, et similique sit dolor at doloribus voluptate eius. 
+                 Officia, quas. lor</p>
+            <a href="#">Get Started</a> 
+        </div>
+        <p class="copyrightText">@2022. Bootang</p>
+    </section>
+    <div class="menuToggle" onclick="toggleMenu();">&#x2630;</div>
+    <div class="navigation">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Team</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="socialBar">
+            <ul>
+                <li><a href="#"><img src="./css/facebook.png"></a></li>
+                <li><a href="#"><img src="./css/twitter.png"></a></li>
+                <li><a href="#"><img src="./css/instagram.png"></a></li>
+            </ul>
+            <a href="#" class="emailBx"><img src="./css/@.png"></a>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function toggleMenu(){
+            var menuToggle = document.querySelector('.menuToggle');
+            var navigation = document.querySelector('.navigation');
+            menuToggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+        
+    </script>
+</body>
+</html>
